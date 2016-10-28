@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SoundTile</string>
+    <string name="permission_request">SoundTile requires \"Do Not Disturb\" access.</string>
+    <string name="all_set">You are all set!</string>
+    <string name="grant_access">Grant access</string>
+    <string name="state_normal">Sound</string>
+    <string name="state_vibrate">Vibrate</string>
+    <string name="state_silent">Mute</string>
+</resources>
