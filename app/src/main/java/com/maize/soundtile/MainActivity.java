@@ -16,10 +16,11 @@ package com.maize.soundtile;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,15 +32,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mLabel = (TextView) findViewById(R.id.tvLabel);
-        mBtnPermission = (Button) findViewById(R.id.btnPermission);
-        mBtnPermission.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(
-                        android.provider.Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS);
-                startActivity(intent);
-            }
+        mLabel = findViewById(R.id.tvLabel);
+        mBtnPermission = findViewById(R.id.btnPermission);
+        mBtnPermission.setOnClickListener(view -> {
+            Intent intent = new Intent(android.provider.Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS);
+            startActivity(intent);
         });
 
         ensureUi();
